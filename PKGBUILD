@@ -3,7 +3,7 @@
 pkgname=ipsvd-dietlibc
 provides=ipsvd
 pkgver=1.0.0
-pkgrel=7
+pkgrel=1
 pkgdesc="A set of internet protocol service daemons for Unix, with ssl provided by matrixssl.  Compiled with dietlibc"
 url="http://smarden.org/ipsvd/"
 license=( custom )
@@ -16,7 +16,7 @@ md5sums=('82c8710e4beec3e92f3d9a616290232b'
 
 build() {
   echo $srcdir
-  cp "$srcdir/matrixssl-1.8.5.orig/matrixssl-1-8-5-open.tar.gz" "$srcdir/net/matrixssl.tar.gz"
+  cp "$srcdir/matrixssl-1.8.5.orig/matrixssl-1-8-5-open.tar.gz" "$srcdir/net/ipsvd-$pkgver/src/matrixssl.tar.gz"
   cd "$srcdir/net/ipsvd-$pkgver/src"
   echo "/opt/diet/bin/diet -Os ${CC:-cc} ${CFLAGS:-Os -Wall}" > conf-cc
   echo "/opt/diet/bin/diet -Os ${LD:-cc} ${LDFLAGS:--s}" > conf-ld
