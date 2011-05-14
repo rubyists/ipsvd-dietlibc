@@ -2,8 +2,9 @@
 # Maintainer: TJ Vanderpoel <tj@rubyists.com>
 pkgname=ipsvd-dietlibc
 provides=ipsvd
+conflicts=ipsvd
 pkgver=1.0.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A set of internet protocol service daemons for Unix, with ssl provided by matrixssl.  Compiled with dietlibc"
 url="http://smarden.org/ipsvd/"
 license=( custom )
